@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>temp</name>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_110" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo a" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="ToReproduce_ReadonlyProject_2_HttpsGithubComIyankeBigdataRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</template>
+
